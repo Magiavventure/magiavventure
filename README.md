@@ -1,6 +1,6 @@
 # Magiavventure
-![Docker Image Version (latest semver)](https://img.shields.io/docker/v/magiavventure/app-magiavventure-authorization)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Magiavventure/app-magiavventure-authorization/build.yml)
+![Docker Image Version (latest semver)](https://img.shields.io/docker/v/magiavventure/magiavventure)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Magiavventure/magiavventure/build.yml)
 
 ## Configuration
 
