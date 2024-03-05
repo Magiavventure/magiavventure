@@ -1,0 +1,99 @@
+magiavventure:
+  lib:
+    common:
+      errors:
+        service-errors-messages:
+          user-blocked:
+            code: user-blocked
+            message: |-
+              L'utente è bloccato
+            status: 401
+          user-not-found:
+            code: user-not-found
+            message: |-
+              L'utente con id '%s' non è stato trovato
+            status: 404
+          user-exists:
+            code: user-exists
+            message: |-
+              Il nome '%s' non è disponibile
+            status: 409
+          category-not-found:
+            code: category-not-found
+            message: |-
+              La categoria con id %s non è stata trovata
+            status: 404
+          category-exists:
+            code: category-exists
+            message: |-
+              Impossibile procedere con il salvataggio, esiste già una categoria con nome: %s
+            status: 403
+          story-not-found:
+            code: story-not-found
+            message: |-
+              La storia con id %s non è stata trovata
+            status: 404
+    jwt:
+      endpoints:
+        - path: /user/v1/saveUser
+          authenticated: false
+        - path: /user/v1/checkUserName/**
+          authenticated: false
+        - path: /authorization/v1/loginById
+          authenticated: false
+        - path: /user/v1/retrieveUsers
+          authenticated: true
+          roles: admin
+        - path: /user/v1/elevateUser/**
+          authenticated: true
+          roles: admin
+        - path: /user/v1/banUser/**
+          authenticated: true
+          roles: admin
+        - path: /user/v1/retrieveUser/**
+          authenticated: true
+          roles: user,admin
+        - path: /user/v1/updateUser
+          authenticated: true
+          roles: user,admin
+        - path: /user/v1/deleteUser/**
+          authenticated: true
+          roles: user,admin
+        - path: /category/v1/saveCategory
+          authenticated: true
+          roles: admin
+        - path: /category/v1/updateCategory
+          authenticated: true
+          roles: admin
+        - path: /category/v1/deleteCategory/**
+          authenticated: true
+          roles: admin
+        - path: /category/v1/retrieveCategory/**
+          authenticated: true
+          roles: user,admin
+        - path: /category/v1/retrieveCategories
+          authenticated: false
+        - path: /story/v1/saveStory
+          authenticated: true
+          roles: user,admin
+        - path: /story/v1/updateStory
+          authenticated: true
+          roles: user,admin
+        - path: /story/v1/deleteStory/**
+          authenticated: true
+          roles: user,admin
+        - path: /story/v1/retrieveStory/**
+          authenticated: true
+          roles: user,admin
+        - path: /story/v1/retrieveStories
+          authenticated: true
+          roles: user,admin
+      excludedEndpoints:
+        - path: /authorization/v1/loginById
+          method: POST
+        - path: /user/v1/saveUser
+          method: POST
+        - path: /user/v1/checkUserName/**
+          method: GET
+        - path: /category/v1/retrieveCategories
+          method: GET
