@@ -16,7 +16,7 @@ import java.util.UUID;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/v1")
+@RequestMapping("/story/v1")
 public class StoryOperation {
 
     private final StoryService storyService;

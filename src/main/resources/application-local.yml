@@ -17,6 +17,14 @@ spring:
       cache-names: user, users, category, categories, story, stories
       time-to-live: 5m
 
+magiavventure:
+  lib:
+    jwt:
+      cors:
+        allowedOrigins:
+          - http://localhost:4200
+          - http://192.168.188.29:4200
+
 server.port: 8080
 
 logging:

@@ -34,6 +34,26 @@ magiavventure:
               La storia con id %s non è stata trovata
             status: 404
     jwt:
+      cors:
+        allowedOrigins:
+          - https://magiavventure.it
+        allowedMethods:
+          - GET
+          - POST
+          - PUT
+          - PATCH
+          - DELETE
+          - OPTIONS
+        allowedHeaders:
+          - Content-Type
+          - X-Requested-With
+          - accept
+          - Origin
+          - Access-Control-Request-Method
+          - Access-Control-Request-Headers
+          - Access-Control-Allow-Origin
+        exposedHeaders:
+          - Mg-A-Token
       endpoints:
         - path: /user/v1/saveUser
           authenticated: false
