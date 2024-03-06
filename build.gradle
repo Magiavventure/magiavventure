@@ -66,7 +66,7 @@ repositories {
 ext {
 	cacheVersion = '2.0.0'
 	commonVersion = '2.0.0'
-	jwtVersion = '2.0.0'
+	jwtVersion = '2.1.0'
 	mongoVersion = '2.0.0'
 	mapstructVersion = '1.5.5.Final'
 }

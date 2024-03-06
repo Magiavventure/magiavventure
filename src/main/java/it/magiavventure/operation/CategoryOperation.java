@@ -16,7 +16,7 @@ import java.util.UUID;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/v1")
+@RequestMapping("/category/v1")
 public class CategoryOperation {
 
     private final CategoryService categoryService;
